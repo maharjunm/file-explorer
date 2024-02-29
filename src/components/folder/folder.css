@@ -1,0 +1,21 @@
+
+.flex {
+  display: flex;
+}
+.folder-container {
+  align-items: center;
+  gap: 0.5rem;
+
+}
+.folder-root-container {
+  margin: 10px 0 0 10px;
+}
+.folder-icon-container {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid blue;
+  color: blue;
+  cursor: pointer;
+}

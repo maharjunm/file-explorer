@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.file-container {
+  gap: 0.5rem;
+  margin: 10px 0 0 10px;
+}
+
+.file {
+  font-size: 16px;
+}
+
+.file-icon {
+  font-size: 12px;
+  height: 15px;
+  width: 30px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  justify-content: center;
+}
