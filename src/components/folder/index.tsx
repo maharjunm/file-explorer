@@ -24,11 +24,11 @@ export const Folder = (props: Props) => {
       <FolderName updateIsOpen={setIsOpen} isOpen={isOpen} query={query} name={data.name} />
       <div>
         {
-          isOpen ? data.data.map((eachFile) => {
+          isOpen ? data.data.map((eachFile, index) => {
             if (eachFile.type === FILE_TYPE.FOLDER) {
-              return <Folder query={query} shouldOpen={shouldOpen} data={eachFile as FileData} />
+              return <Folder key={`${eachFile.name}-${index}`} query={query} shouldOpen={shouldOpen} data={eachFile as FileData} />
             } else {
-              return <File query={query} fileData={eachFile as FileConfig} />
+              return <File key={`${eachFile.name}-${index}`} query={query} fileData={eachFile as FileConfig} />
             }
           }) : null
         }

@@ -11,10 +11,17 @@ interface Props {
 
 export const FolderName = (props: Props) => {
 
-  const { isOpen, updateIsOpen, name, query } = props
+  const { isOpen, updateIsOpen, name, query } = props;
+
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    console.log(e)
+    if (e.code === 'Enter') {
+      updateIsOpen(!isOpen);
+    }
+  }
 
   return (
-    <div className='folder-container flex' >
+    <div tabIndex={2} onKeyDown={onKeyDown} className='folder-container flex' >
       <div onClick={() => updateIsOpen(!isOpen)} className='folder-icon-container flex'>
         {isOpen ? '-' : '+'}
       </div>
