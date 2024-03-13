@@ -14,7 +14,7 @@ export const SearchBar = (props: Props) => {
 
   return (
     <div>
-      <input className='search-container' onChange={onChange} />
+      <input data-testId="search-box" className='search-container' onChange={onChange} />
     </div>
   )
 }

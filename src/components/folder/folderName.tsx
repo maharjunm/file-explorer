@@ -19,10 +19,9 @@ export const FolderName = (props: Props) => {
       updateIsOpen(!isOpen);
     }
   }
-
   return (
     <div tabIndex={2} onKeyDown={onKeyDown} className='folder-container flex' >
-      <div onClick={() => updateIsOpen(!isOpen)} className='folder-icon-container flex'>
+      <div data-testId={`icon-${name}`} onClick={() => updateIsOpen(!isOpen)} className='folder-icon-container flex'>
         {isOpen ? '-' : '+'}
       </div>
       <FileName query={query} name={name} />

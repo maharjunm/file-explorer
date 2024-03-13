@@ -17,7 +17,7 @@ export const Folder = (props: Props) => {
 
   useEffect(() => {
     setIsOpen(shouldOpen)
-  }, [shouldOpen])
+  }, [shouldOpen]);
 
   return (
     <div className='folder-root-container'>
